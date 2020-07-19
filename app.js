@@ -10,9 +10,94 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
+
+inquirer
+  .prompt([
+    {
+      type: "input",
+      message: "Employee name?",
+      name: "name",
+    },
+    {
+      type: "input",
+      message: "Id?",
+      name: "Id",
+    },
+    {
+      type: "Email",
+      message: "Email?",
+      name: "Email",
+    },
+    {
+      type: "input",
+      message: "Role?",
+      name: "Role",
+    },
+  ])
+  .then(function (response) {
+    switch (response.Role) {
+      case "Manager":
+        inquirer
+          .prompt([
+            { type: "input", message: "officeNumber?", name: "officeNumber" },
+          ])
+          .then(function (office) {
+            mgr = new Manager(
+              response.name,
+              response.Id,
+              response.Email,
+              office.officeNumber
+            );
+          });
+        console.log("created Manager");
+
+        break;
+      case "Engineer":
+        inquirer
+          .prompt([
+            {
+              type: "input",
+              message: "gitHub?",
+              name: "github",
+            },
+          ])
+          .then(function (gitHUB) {
+            engr = new Engineer(
+              response.name,
+              response.Id,
+              response.Email,
+              gitHUB.github
+            );
+          });
+        console.log("created Engineer");
+
+        break;
+
+      case "Intern":
+        inquirer
+          .prompt([
+            {
+              type: "input",
+              message: "School?",
+              name: "school",
+            },
+          ])
+          .then(function (SCHOOL) {
+            intern = new Intern(
+              response.name,
+              response.Id,
+              response.Email,
+              SCHOOL.school
+            );
+          });
+        console.log("created Intern");
+        break;
+      default:
+        break;
+    }
+  });
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
