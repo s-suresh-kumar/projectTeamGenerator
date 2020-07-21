@@ -18,6 +18,7 @@ const mgrAddlDetail = "office number";
 const engrAddlDetail = "github username";
 const internAddlDetail = "school name";
 let hireMoreMembers_g = "no";
+let managersAdded = 0;
 hireTeamMember();
 async function hireTeamMember() {
   try {
@@ -63,7 +64,13 @@ async function hireTeamMember() {
     console.log("hiremoremembers", hireMoreMembers);
     switch (role) {
       case "Manager":
-        employees.push(new Manager(name, id, email, addlDetail));
+        if (managersAdded < 1) {
+          employees.push(new Manager(name, id, email, addlDetail));
+          managersAdded++;
+        } else {
+          console.log("Only one Manager allowed in the team");
+          alert("Only one Manager allowed in the team, so Not Added");
+        }
         break;
       case "Engineer":
         employees.push(new Engineer(name, id, email, addlDetail));
