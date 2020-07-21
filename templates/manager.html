@@ -1,19 +1,21 @@
-<div class="col-4 card employee-card bg-primary m-1">
-  <div class="card-header">
-    <h2 class="card-title">{{ name }}</h2>
-    <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>{{ role }}</h3>
-  </div>
-  <div class="card-body" style="background-color: skyblue;">
-    <ul class="list-group">
-      <li class="list-group-item" style="background-color: paleturquoise;">
-        ID: {{ id }}
-      </li>
-      <li class="list-group-item" style="background-color: paleturquoise;">
-        Email: <a href="mailto:{{ email }}">{{ email }}</a>
-      </li>
-      <li class="list-group-item" style="background-color: paleturquoise;">
-        Office number: {{ officeNumber }}
-      </li>
-    </ul>
+<div class="col-md-3">
+  <div class="card employee-card bg-primary m-1">
+    <div class="card-header">
+      <h2 class="card-title">{{ name }}</h2>
+      <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>{{ role }}</h3>
+    </div>
+    <div class="card-body" style="background-color: skyblue;">
+      <ul class="list-group">
+        <li class="list-group-item" style="background-color: paleturquoise;">
+          ID: {{ id }}
+        </li>
+        <li class="list-group-item" style="background-color: paleturquoise;">
+          Email: <a href="mailto:{{ email }}">{{ email }}</a>
+        </li>
+        <li class="list-group-item" style="background-color: paleturquoise;">
+          Office number: {{ officeNumber }}
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
