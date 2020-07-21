@@ -69,7 +69,6 @@ async function hireTeamMember() {
           managersAdded++;
         } else {
           console.log("Only one Manager allowed in the team");
-          alert("Only one Manager allowed in the team, so Not Added");
         }
         break;
       case "Engineer":
