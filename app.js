@@ -26,10 +26,32 @@ async function hireTeamMember() {
       message: "Name of Team Member :",
       name: "name",
     });
-    const { id } = await inquirer.prompt({
-      message: "Id of Team Member :",
-      name: "id",
-    });
+    console.log("NNAME", name);
+
+    let promptAgain = false;
+
+    do {
+      promptAgain = false;
+      var { id } = await inquirer.prompt({
+        message: "Id of Team Member :",
+        name: "id",
+      });
+      if (Number.isNaN(id)) {
+        console.log("Not a number:", "Please provide a number for id");
+        promptAgain = true;
+      }
+      if (employees.length > 0) {
+        const sameId = employees.filter(function (empl) {
+          return id === empl.id;
+        });
+        if (sameId.length > 0) {
+          console.log("duplicate id", "provide unique employee id");
+          promptAgain = true;
+        }
+      }
+      console.log("id", id);
+    } while (promptAgain === true);
+
     const { email } = await inquirer.prompt({
       message: "Email of Team Member :",
       name: "email",
