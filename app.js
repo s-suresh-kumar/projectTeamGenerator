@@ -36,7 +36,7 @@ async function hireTeamMember() {
         message: "Id of Team Member: ",
         name: "id",
       });
-      if (Number.isNaN(id)) {
+      if (isNaN(id)) {
         console.log("Not a number:", "Please provide a number for id");
         promptAgain = true;
       }
