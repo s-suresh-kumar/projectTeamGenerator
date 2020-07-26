@@ -40,7 +40,7 @@ You need inquirer package installed for this app to run. So the steps are :
 ## Instructions
 
 Since this is a command line app, just run 'node app.js'. The app will ask for team member name, id, e-mail.  The app will validate if there is a duplicate id or if the id is not a number.  It only allows number for id and it has to be unique. Then it will ask the role of the team member. The prompt presents a choice list of 'Engineer', 'Intern' and 'Manager' as choices. User has to pick one role for the team member. Depending on the role, the app will ask additional info of 'Office Number' in case of Manager, 'github user name' in case of Engineer and 'School name' in case of Intern. Finally it prompts if the user want to add additional team members to the team.  A choice list of 'yes','no' is presented to the user. If the user chooses 'yes', it will ask the above questions for the new team member. In case the user chooses 'no', the team.html is generated and stored in ./output directory.
-The app also validates and allows only one member with role 'Manager' as per user story requirement.
+The app also validates and allows only one member with role 'Manager' as per user story requirement. Extra care is taken to see that cards are of equal width and height as well as the whole page is responsive across different screen sizes and viewports.
 
 ## License
 
