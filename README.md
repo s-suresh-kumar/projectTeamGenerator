@@ -6,6 +6,10 @@
 
 [projectTeamGenerator walkthru video](https://drive.google.com/file/d/1nPlVIOv2-6reW6Xy9XvoDHafyBFrlbt6/view?usp=sharing)
 
+#### App In Action
+
+![App in action](assets/images/projectTeamGenerator-comppressed.gif)
+
 [projectTeamGenerator sample generated output](https://s-suresh-kumar.github.io/projectTeamGenerator/output/team.html)
 
 ## Table of Contents
