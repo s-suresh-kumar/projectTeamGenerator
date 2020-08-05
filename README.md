@@ -8,7 +8,7 @@
 
 #### App In Action
 
-![App in action](assets/images/projectTeamGenerator-comppressed.gif)
+![App in action](assets/images/projectTeamGenerator.gif)
 
 [projectTeamGenerator sample generated output](https://s-suresh-kumar.github.io/projectTeamGenerator/output/team.html)
 
